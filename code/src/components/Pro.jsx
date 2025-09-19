@@ -10,10 +10,10 @@ const Pro = ({ language, setCode }) => {
 
   useEffect(() => {
     const defaults = {
-      c: `#include <stdio.h>\nint main() {\n  int x;\n  scanf("%d", &x);\n  printf("Output: %d\\n", x + 10);\n  return 0;\n}`,
-      cpp: `#include <iostream>\nusing namespace std;\nint main() {\n  int x;\n  cin >> x;\n  cout << "Output: " << x + 10 << endl;\n  return 0;\n}`,
-      java: `import java.util.*;\npublic class Temp {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int x = sc.nextInt();\n    System.out.println("Output: " + (x + 10));\n  }\n}`,
-      python: `x = int(input())\nprint("Output:", x + 10)`,
+      c: `#include <stdio.h>\nint main() {\n  int x;\n  scanf("%d", &x);\n  printf(" %d\\n", x + 10);\n  return 0;\n}`,
+      cpp: `#include <iostream>\nusing namespace std;\nint main() {\n  int x;\n  cin >> x;\n  cout  << x + 10 << endl;\n  return 0;\n}`,
+      java: `import java.util.*;\npublic class Temp {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int x = sc.nextInt();\n    System.out.println((x + 10));\n  }\n}`,
+      python: `x = int(input())\nprint( x + 10)`,
     };
     setLocalCode(defaults[language] || "");
     setCode(defaults[language] || "");

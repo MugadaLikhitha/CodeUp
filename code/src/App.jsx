@@ -9,6 +9,7 @@ const App = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
 
+
   const handleRun = async () => {
     setOutput("Running...");
     try {
@@ -43,8 +44,9 @@ const App = () => {
           placeholder="Enter input here..."
         />
         <div className="output-box">
-          <p><strong>Output:</strong></p>
-          <pre>{output}</pre>
+          <p>Output</p>
+          <p><strong><pre>{output}</pre></strong></p>
+          
         </div>
       </div>
 
